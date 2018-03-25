@@ -7,14 +7,14 @@
         <div class="split-content-vertically-center">
           <div class="split-intro">
             <div>
-              <img src="/static/images/background.jpg" alt="" style="width:50%; height:50%;">
+              <img src="/static/images/me.jpg" alt="" style="width:30%; height:30%;">
             </div>
             <!-- <h1>Kim Hyunse</h1> -->
             <span class="tagline">Web Developer</span>
           </div>
           <div class="split-bio">
             <p>
-              Hello, my name is Kim Hyunse. I'm a Full Stack Web Developer living in Toronto, Canada.
+              Hello, my name is Kim Hyunse. I'm a Web Developer living in Toronto, Canada.
               I'm looking for a job as Web Developer. I love to work with people having a passion and enjoy learning something new.
               I can deal with both front-end and back-end technologies. I know how to create your website
               using the latest technologies available.
@@ -57,14 +57,14 @@
         </div>
       </div>
     </div>
-    <modal name="example-modal"
+    <modal name="project-modal"
          transition="nice-modal-fade"
          :min-width="200"
          :min-height="200"
          :delay="100">
-      <div class="example-modal-content">
-        <p>{{modal.title}}</p>
-        <p>{{modal.info}}</p>
+      <div class="project-modal-content">
+        <p class="project-title">{{modal.title}}</p>
+        <p class="project-info">{{modal.info}}</p>
       </div>
     </modal>
   </div>
@@ -141,7 +141,7 @@ export default {
     show (obj) {
       this.modal.title = obj.name
       this.modal.info = obj.info
-      this.$modal.show('example-modal')
+      this.$modal.show('project-modal')
     }
   },
   components: {
@@ -159,5 +159,11 @@ export default {
 }
 .split-info {
   padding-left: 40px;
+}
+.project-modal-content{
+  padding: 20px;
+}
+.project-title {
+  border-bottom: 1px solid #848d96;
 }
 </style>
