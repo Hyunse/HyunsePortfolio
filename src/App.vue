@@ -61,7 +61,12 @@
          transition="nice-modal-fade"
          :min-width="200"
          :min-height="200"
-         :delay="100">
+         height="auto"
+         :delay="100"
+         :resizable="true"
+         :adaptive="true"
+         :draggable="true"
+         :scrollable="true">
       <div class="project-modal-content">
         <p class="project-title">{{modal.title}}</p>
         <p class="project-info">{{modal.info}}</p>
@@ -161,7 +166,7 @@ export default {
   padding-left: 40px;
 }
 .project-modal-content{
-  padding: 20px;
+  padding: 40px 20px 40px 20px;
 }
 .project-title {
   border-bottom: 1px solid #848d96;
