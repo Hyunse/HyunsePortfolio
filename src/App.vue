@@ -7,7 +7,7 @@
         <div class="split-content-vertically-center">
           <div class="split-intro">
             <div>
-              <img src="/static/images/me.jpg" alt="" style="width:30%; height:30%;">
+              <!-- <img src="/static/images/me.jpg" alt="" style="width:30%; height:30%;"> -->
             </div>
             <!-- <h1>Kim Hyunse</h1> -->
             <span class="tagline">Web Developer</span>
@@ -59,17 +59,25 @@
     </div>
     <modal name="project-modal"
          transition="nice-modal-fade"
-         :min-width="200"
-         :min-height="200"
-         height="auto"
+         :min-width="300"
+         :min-height="600"
+         width="70%"
+         height="90%"
          :delay="100"
-         :resizable="true"
          :adaptive="true"
-         :draggable="true"
-         :scrollable="true">
+         :draggable="true">
       <div class="project-modal-content">
-        <p class="project-title">{{modal.title}}</p>
-        <p class="project-info">{{modal.info}}</p>
+        <div class="modal-header">
+          <p>{{modal.title}}</p>
+        </div>
+        <div class="modal-body">
+          <div class="modal-image">
+            <img src="/static/images/test.jpg" alt="">
+          </div>
+          <div class="modal-content">
+             <p class="project-info">{{modal.info}}</p>
+          </div>
+        </div>
       </div>
     </modal>
   </div>
@@ -165,10 +173,34 @@ export default {
 .split-info {
   padding-left: 40px;
 }
-.project-modal-content{
-  padding: 40px 20px 40px 20px;
+/* V-Modal */
+.v--modal-overlay {
+  background: rgba(0, 0, 0, 0.6);
 }
-.project-title {
-  border-bottom: 1px solid #848d96;
+
+.project-modal-content{
+  padding: 10px 20px 10px 20px;
+}
+.modal-header {
+  height:30%;
+  font-size: 20px;
+  font-weight: bold;
+}
+  .modal-header > p {
+    color: #000000 !important;
+  }
+.modal-body {
+  width: 100%;
+  max-height: 70%;
+}
+.modal-image {
+  max-height: 450px;
+}
+  .modal-image > img {
+    width: 100%;
+    max-height: 450px;
+  }
+
+.modal-content {
 }
 </style>
