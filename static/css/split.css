@@ -227,8 +227,8 @@ body.page-template-page-fullsingle-split {
         color: #CA486d;
         transition-duration: 0.1s; }
     .split-lists .split-list ul li p {
-      /* padding: 0 0 0 20px; */
-      margin-top: 10px;
+      padding-top: 20px;
+      /* margin-top: 10px; */
       font-size: 16px;
       line-height: 16px;
     }
