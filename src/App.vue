@@ -47,8 +47,14 @@
             <div class="split-list">
               <h3>Connect</h3>
               <ul>
-                <i class="far fa-envelope"></i>
-                <span style="margin-left: 15px;">anzmf12@naver.com</span>
+                <li>
+                  <i class="far fa-envelope"></i>
+                  <span style="margin-left: 15px;">anzmf12@naver.com</span>
+                </li>
+                <li>
+                  <i class="fab fa-github"></i>
+                  <span style="margin-left: 15px;">https://github.com/Hyunse</span>
+                </li>
               </ul>
             </div>
           </div>
@@ -61,18 +67,23 @@
          transition="nice-modal-fade"
          :min-width="300"
          :min-height="600"
+         :max-height="800"
          width="70%"
-         height="90%"
+         height="auto"
+         :scrollable="true"
          :delay="100"
-         :adaptive="true"
-         :draggable="true">
+         :adaptive="true">
       <div class="project-modal-content">
         <div class="modal-header">
           <p>{{modal.title}}</p>
         </div>
         <div class="modal-body">
           <div class="modal-image">
-            <img src="/static/images/test.jpg" alt="">
+            <carousel :per-page="1">
+              <slide v-for="(image, index) in modal.images" :key="index">
+                <img :src="image" style="max-width:100%;max-height:300px;">
+              </slide>
+            </carousel>
           </div>
           <div class="modal-content">
              <p class="project-info">{{modal.info}}</p>
@@ -85,6 +96,7 @@
 
 <script>
 import infoModal from './components/Modal.vue'
+import { Carousel, Slide } from 'vue-carousel'
 
 export default {
   name: 'App',
@@ -101,20 +113,32 @@ export default {
           time: '2017.06 ~ 2017.12',
           info: `Remote AR Homepage has 3 part pages. First, main page is introducing RemoteAR application.
                  And next part is that RemoteAR service page. Also, it has analytics pages to give usage information for 
-                 customers`
+                 customers`,
+          images: [
+            '/static/images/remotear/remotear_1.png',
+            '/static/images/remotear/remotear_2.png',
+            '/static/images/remotear/remotear_3.png',
+            '/static/images/remotear/remotear_4.png']
         },
         {
           name: 'Software Center Busan Univ',
           company: 'Virnect',
           time: '2017.10 ~ 2017.11',
           info: `This site is for university students and teachers for introducing Busan University's software center
-                and sharing resources, such as pictures and video`
+                and sharing resources, such as pictures and video`,
+          images: [
+            '/static/images/busan/busan_1.jpg',
+            '/static/images/busan/busan_2.jpg',
+            '/static/images/busan/busan_3.jpg',
+            '/static/images/busan/busan_4.jpg']
         },
         {
           name: 'See Real Homepage',
           company: 'Virnect',
           time: '2017.04 ~ 2017.05',
-          info: `It's a single page web to inroduce SeeReal application.`
+          info: `It's a single page web to inroduce SeeReal application.`,
+          images: [
+            '/static/images/seereal/seereal_1.png']
         },
         {
           name: 'Processed Meat,Red Meat Calculation Program APP',
@@ -123,20 +147,35 @@ export default {
           info: `It's a hybrid web app to calculate calorie in a processed meat and red meat user eat. 
           I made a registration page in which user can register a food they eat,
           a board page in which user can check calorie in each time period,
-          a graph page to use JqPlot Chart, etc.`
+          a graph page to use JqPlot Chart, etc.`,
+          images: [
+            '/static/images/cal/cal_1.jpg',
+            '/static/images/cal/cal_2.jpg',
+            '/static/images/cal/cal_3.jpg',
+            '/static/images/cal/cal_4.jpg']
         },
         {
           name: 'Kyongnam Bank Internet Banking',
           company: 'ABC Solutuon',
           time: '2016.02 ~ 2016.12',
           info: `It's internet banking system. I made foreign exchange part like Foreign Currency Remittance, 
-          Direct Remittance Service, Foreign Currency Time Deposit, Exchange rate inquiry, etc.`
+          Direct Remittance Service, Foreign Currency Time Deposit, Exchange rate inquiry, etc.`,
+          images: [
+            '/static/images/knbank/k_1.jpg',
+            '/static/images/knbank/k_2.jpg',
+            '/static/images/knbank/k_3.jpg',
+            '/static/images/knbank/k_4.jpg']
         },
         {
           name: 'Nutrient Calculation Program WEB',
           company: 'ABC Solutuon',
           time: '2015.12 ~ 2016.01',
-          info: `Nutritional contents program is a tool calculating nutritional contents in food. I did data migration, made a nutritional contents program, made its admin page to use WebSquare.`
+          info: `Nutritional contents program is a tool calculating nutritional contents in food. I did data migration, made a nutritional contents program, made its admin page to use WebSquare.`,
+          images: [
+            '/static/images/eat/eat_1.jpg',
+            '/static/images/eat/eat_2.jpg',
+            '/static/images/eat/eat_3.jpg',
+            '/static/images/eat/eat_4.jpg']
         },
         {
           name: 'Bosch Master Tool',
@@ -145,7 +184,11 @@ export default {
           info: `Master Tool is a web application for a field worker and officer in Bosch.
                 It was my first web project in my career. I made a analytics page using c3.js,
                 batch program to send Email on specific day and time, 
-                validation check form and uploaded Excel, etc.`
+                validation check form and uploaded Excel, etc.`,
+          images: [
+            '/static/images/bosch/mastertool_1.png',
+            '/static/images/bosch/mastertool_2.png',
+            '/static/images/bosch/mastertool_3.png']
         }
       ]
     }
@@ -154,11 +197,14 @@ export default {
     show (obj) {
       this.modal.title = obj.name
       this.modal.info = obj.info
+      this.modal.images = obj.images
       this.$modal.show('project-modal')
     }
   },
   components: {
-    infoModal
+    infoModal,
+    Carousel,
+    Slide
   }
 }
 </script>
@@ -179,12 +225,16 @@ export default {
 }
 
 .project-modal-content{
+  height: auto;
   padding: 10px 20px 10px 20px;
+
 }
 .modal-header {
   height:30%;
   font-size: 20px;
   font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
   .modal-header > p {
     color: #000000 !important;
@@ -193,14 +243,11 @@ export default {
   width: 100%;
   max-height: 70%;
 }
-.modal-image {
-  max-height: 450px;
+.VueCarousel-slide-active {
+  text-align: center;
 }
-  .modal-image > img {
-    width: 100%;
-    max-height: 450px;
-  }
 
 .modal-content {
+  font-size: 15px;
 }
 </style>

@@ -5,9 +5,11 @@ import App from './App'
 import router from './router'
 // npm
 import VModal from 'vue-js-modal'
+import VueCarousel from 'vue-carousel'
 
 Vue.config.productionTip = false
 
+Vue.use(VueCarousel)
 Vue.use(VModal, { dynamic: true })
 
 /* eslint-disable no-new */
