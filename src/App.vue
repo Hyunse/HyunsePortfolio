@@ -188,7 +188,7 @@ export default {
             '/static/images/knbank/k_2.jpg',
             '/static/images/knbank/k_3.jpg',
             '/static/images/knbank/k_4.jpg'],
-          tech: Java, Jquery, Oracle.'
+          tech: 'Java, Jquery, Oracle.'
         },
         {
           name: 'Nutrient Calculation Program WEB',
