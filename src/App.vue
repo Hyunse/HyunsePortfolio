@@ -174,7 +174,7 @@ export default {
             '/static/images/cal/cal_2.jpg',
             '/static/images/cal/cal_3.jpg',
             '/static/images/cal/cal_4.jpg'],
-          tech: 'eGovFramework, Java, Mybatis, Jquery, JqPlot Chart, Altibase.'
+          tech: 'Spring Framework, Java, Mybatis, Jquery, JqPlot Chart, Altibase.'
         },
         {
           name: 'Kyongnam Bank Internet Banking',
@@ -188,7 +188,7 @@ export default {
             '/static/images/knbank/k_2.jpg',
             '/static/images/knbank/k_3.jpg',
             '/static/images/knbank/k_4.jpg'],
-          tech: 'UBiz30 Framework, IB20 Framework, Java, Jquery, Oracle.'
+          tech: Java, Jquery, Oracle.'
         },
         {
           name: 'Nutrient Calculation Program WEB',
@@ -202,7 +202,7 @@ export default {
             '/static/images/eat/eat_2.jpg',
             '/static/images/eat/eat_3.jpg',
             '/static/images/eat/eat_4.jpg'],
-          tech: 'eGovFramework, Java, Mybatis, Jquery, WebSquare5, Altibase.'
+          tech: 'Spring Framework, Java, Mybatis, Jquery, WebSquare5, Altibase.'
         },
         {
           name: 'Bosch Master Tool',
