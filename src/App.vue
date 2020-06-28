@@ -64,7 +64,7 @@
                 </li>
                 <li>
                   <i class="fab fa-github"></i>
-                  <span style="margin-left: 15px;">https://github.com/Hyunse</span>
+                  <a href="https://github.com/Hyunse"><span style="margin-left: 15px;">https://github.com/Hyunse</span></a>
                 </li>
               </ul>
             </div>
