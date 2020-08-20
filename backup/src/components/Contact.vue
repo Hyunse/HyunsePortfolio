@@ -4,12 +4,12 @@
     <ul>
       <li>
         <i class="far fa-envelope"></i>
-        <span style="margin-left: 15px;">anzmf12@naver.com</span>
+        <span class="contact-content">anzmf12@naver.com</span>
       </li>
       <li>
         <i class="fab fa-github"></i>
         <a href="https://github.com/Hyunse">
-          <span style="margin-left: 15px;">https://github.com/Hyunse</span>
+          <span class="contact-content">https://github.com/Hyunse</span>
         </a>
       </li>
     </ul>
@@ -26,4 +26,8 @@ export default {
 </script>
 
 <style>
+.contact-content {
+  margin-left: 15px;
+}
+
 </style>

@@ -2,22 +2,22 @@
   <li>
     <a href="#none" v-on:click="openModal(project)">{{ project.name }}</a>
     <div>
-      <p class="split-icon">
+      <p class="project-icon">
         <i class="far fa-clock"></i>
       </p>
-      <p class="split-info">{{ project.time }}</p>
+      <p class="project-info">{{ project.time }}</p>
     </div>
     <div>
-      <p class="split-icon">
+      <p class="project-icon">
         <i class="far fa-building"></i>
       </p>
-      <p class="split-info">{{ project.company }}</p>
+      <p class="project-info">{{ project.company }}</p>
     </div>
     <div>
-      <p class="split-icon">
+      <p class="project-icon">
         <i class="fas fa-child"></i>
       </p>
-      <p class="split-info">{{ project.position }} Developer</p>
+      <p class="project-info">{{ project.position }} Developer</p>
     </div>
   </li>
 </template>
@@ -33,14 +33,14 @@ export default {
 </script>
 
 <style>
-.split-icon {
+.project-icon {
   position: absolute;
   padding-left: 20px;
   font-size: 0.7em !important;
   color: #848d96 !important;
 }
 
-.split-info {
+.project-info {
   padding-left: 40px;
 }
 </style>
