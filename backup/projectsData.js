@@ -8,10 +8,10 @@ export const porjectsData = [
            And there is RemoateAR service page. Also, it has analytics pages to give usage information for 
            RemoteAR customers.`,
     images: [
-      "/static/images/remotear/remotear_1.png",
-      "/static/images/remotear/remotear_2.png",
-      "/static/images/remotear/remotear_3.png",
-      "/static/images/remotear/remotear_4.png"
+      "./static/images/remotear/remotear_1.png",
+      "./static/images/remotear/remotear_2.png",
+      "./static/images/remotear/remotear_3.png",
+      "./static/images/remotear/remotear_4.png"
     ],
     tech:
       "Vue.js, Javascript, ES6, Responsive Web, C3 Chart, Node.js Express, Azure."
@@ -24,10 +24,10 @@ export const porjectsData = [
     info: `It's a website for university students and teachers to introduce Busan University's software center
           and share resources, such as pictures and video`,
     images: [
-      "/static/images/busan/busan_1.jpg",
-      "/static/images/busan/busan_2.jpg",
-      "/static/images/busan/busan_3.jpg",
-      "/static/images/busan/busan_4.jpg"
+      "./static/images/busan/busan_1.jpg",
+      "./static/images/busan/busan_2.jpg",
+      "./static/images/busan/busan_3.jpg",
+      "./static/images/busan/busan_4.jpg"
     ],
     tech:
       "Jquery, Javascript, Node.js Express, GoogleMap API, Youtube API, Azure."
@@ -38,7 +38,7 @@ export const porjectsData = [
     time: "2017.04 ~ 2017.05",
     position: "Web Front-End",
     info: `It's a single page web to inroduce SeeReal application.`,
-    images: ["/static/images/seereal/seereal_1.png"],
+    images: ["./static/images/seereal/seereal_1.png"],
     tech:
       "Spring Framework, Java, Mybatis, Jquery, Responsive Web, Ms-sql, Azure."
   },
@@ -52,10 +52,10 @@ export const porjectsData = [
     a board page in which user can check calorie in each time period,
     a graph page to use JqPlot Chart.`,
     images: [
-      "/static/images/cal/cal_1.jpg",
-      "/static/images/cal/cal_2.jpg",
-      "/static/images/cal/cal_3.jpg",
-      "/static/images/cal/cal_4.jpg"
+      "./static/images/cal/cal_1.jpg",
+      "./static/images/cal/cal_2.jpg",
+      "./static/images/cal/cal_3.jpg",
+      "./static/images/cal/cal_4.jpg"
     ],
     tech: "Spring Framework, Java, Mybatis, Jquery, JqPlot Chart, Altibase."
   },
@@ -67,10 +67,10 @@ export const porjectsData = [
     info: `It's internet banking system. I made foreign exchange part like Foreign Currency Remittance, 
     Direct Remittance Service, Foreign Currency Time Deposit, Exchange rate inquiry and so on.`,
     images: [
-      "/static/images/knbank/k_1.jpg",
-      "/static/images/knbank/k_2.jpg",
-      "/static/images/knbank/k_3.jpg",
-      "/static/images/knbank/k_4.jpg"
+      "./static/images/knbank/k_1.jpg",
+      "./static/images/knbank/k_2.jpg",
+      "./static/images/knbank/k_3.jpg",
+      "./static/images/knbank/k_4.jpg"
     ],
     tech: "Java, Jquery, Oracle."
   },
@@ -82,10 +82,10 @@ export const porjectsData = [
     info: `Nutritional contents program is a tool calculating nutritional contents in food.
     I did data migration, made a nutritional contents program, made its admin pages to use WebSquare.`,
     images: [
-      "/static/images/eat/eat_1.jpg",
-      "/static/images/eat/eat_2.jpg",
-      "/static/images/eat/eat_3.jpg",
-      "/static/images/eat/eat_4.jpg"
+      "./static/images/eat/eat_1.jpg",
+      "./static/images/eat/eat_2.jpg",
+      "./static/images/eat/eat_3.jpg",
+      "./static/images/eat/eat_4.jpg"
     ],
     tech: "Spring Framework, Java, Mybatis, Jquery, WebSquare5, Altibase."
   },
@@ -99,9 +99,9 @@ export const porjectsData = [
           batch program to send Email on specific day and time, 
           validation check form and uploaded Excel, etc.`,
     images: [
-      "/static/images/bosch/mastertool_1.png",
-      "/static/images/bosch/mastertool_2.png",
-      "/static/images/bosch/mastertool_3.png"
+      "./static/images/bosch/mastertool_1.png",
+      "./static/images/bosch/mastertool_2.png",
+      "./static/images/bosch/mastertool_3.png"
     ],
     tech:
       "Spring Data JPA, Hibernate, Jquery, DHtmlX Grid, C3 Chart, Ms-sql, Bootstrap."
