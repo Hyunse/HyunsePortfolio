@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <a href="#none" v-on:click="show(project)">{{ project.name }}</a>
+  <li>
+    <a href="#none" v-on:click="openModal(project)">{{ project.name }}</a>
     <div>
       <p class="split-icon">
         <i class="far fa-clock"></i>
@@ -19,19 +19,28 @@
       </p>
       <p class="split-info">{{ project.position }} Developer</p>
     </div>
-  </div>
+  </li>
 </template>
 
 <script>
 export default {
-  name: 'Project',
-  props:['project'],
+  name: "Project",
+  props: ["project", "openModal"],
   data() {
     return {};
   },
-  methods: {},
-}
+};
 </script>
 
 <style>
+.split-icon {
+  position: absolute;
+  padding-left: 20px;
+  font-size: 0.7em !important;
+  color: #848d96 !important;
+}
+
+.split-info {
+  padding-left: 40px;
+}
 </style>
